@@ -191,8 +191,6 @@ html {
     font-size: 15px;
 }
 
-#content {}
-
 .content-section {
     padding: 64px 0 112px;
     margin-left: auto;
@@ -335,6 +333,7 @@ html {
     width: 100%;
 }
 
+<<<<<<< Updated upstream
 element.style {}
 
 .footer-container {
@@ -342,10 +341,27 @@ element.style {}
     margin: 0px auto;
     padding: 64px 16px;
     font-size: 24px;
-    color: gray;
+=======
+.footer-container {
+    padding: 64px 16px;
+    font-size: 24px;
 }
 
+.footer-container .row {
+>>>>>>> Stashed changes
+    color: gray;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+<<<<<<< Updated upstream
 .footer-container a:hover,
+=======
+div#footer a:hover,
+>>>>>>> Stashed changes
 .copyright:hover {
     opacity: 0.8;
 }
