@@ -10,7 +10,7 @@
     }
     #header {
         color: black;
-        max-width: 414px;
+        max-width: 100%;
         display: inline-block;
         overflow: hidden;
     }
