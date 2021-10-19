@@ -149,7 +149,7 @@ html {
     float: right;
     line-height: 46px;
     padding: 0 14px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 #header .search-btn:hover {
@@ -328,7 +328,16 @@ html {
 
 .contact-info {
     font-size: 18px;
-    line-height: 1.6px;
+    line-height: 2px;
+}
+
+.contact-info a {
+    opacity: 0.6;
+    color: rgb(79, 79, 206);
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-info i[class*="ti-"] {
@@ -341,8 +350,6 @@ html {
     border: 1px solid #ccc;
     width: 100%;
 }
-
-element.style {}
 
 .footer-container {
     text-align: center;
