@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
@@ -16,13 +17,13 @@
             <!--Begin nav-->
 
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="#tour">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#content">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
 
                 <li>
-                    <a href="">More
+                    <a href="#">More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
 
@@ -34,12 +35,12 @@
                 </li>
 
             </ul>
-            <!--End nav-->
-            <!--Begin search-->
+            <i id="mobile-menu" class="nav__mobile ti-menu"></i>
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <!--End search-->
+            <!--End nav-->
+
         </div>
 
 
@@ -69,15 +70,15 @@
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="row member-list">
-                    <div class="col col-triple text-center">
+                    <div class="s-col-full col col-triple text-center">
                         <div class="member-name">Name</div>
                         <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="" class="member-img">
                     </div>
-                    <div class="col col-triple text-center">
+                    <div class="s-col-full col col-triple text-center">
                         <div class="member-name">Name</div>
                         <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="" class="member-img">
                     </div>
-                    <div class="col col-triple text-center">
+                    <div class="s-col-full col col-triple text-center">
                         <div class="member-name">Name</div>
                         <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="" class="member-img">
                     </div>
@@ -88,7 +89,7 @@
             <!--Tour section-->
 
             <div id="tour" class="tour-section ">
-                <h2 class="section-heading text-white">
+                <h2 class="section-heading text-white mt-16">
                     TOUR DATES
                 </h2>
                 <p class="section-subheading text-white">
@@ -104,7 +105,7 @@
                     </ul>
                     <!--Places-->
                     <div class="row section-placelist ">
-                        <div class="col col-triple ">
+                        <div class="s-col-full col col-triple mt-16 ">
                             <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h2 class="place-heading">New York</h1>
@@ -114,7 +115,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-triple ">
+                        <div class="s-col-full col col-triple mt-16">
                             <img src="https://www.w3schools.com/w3images/paris.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h2 class="place-heading">Paris</h1>
@@ -123,7 +124,7 @@
                                     <button class="btn js-buy-ticket">Buy ticket</button>
                             </div>
                         </div>
-                        <div class="col col-triple ">
+                        <div class="s-col-full col col-triple mt-16">
 
                             <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="" class="place-img">
                             <div class="place-content">
@@ -149,9 +150,9 @@
 
         </div>
         <!--Contact section-->
-        <div class="contact-section content">
+        <div id="contact" class="contact-section content">
             <div class="content-section">
-                <h2 class="section-heading text-center">
+                <h2 class="section-heading text-center ">
                     CONTACT
                 </h2>
                 <p class="section-subheading text-center">
@@ -253,6 +254,38 @@
         modalContainer.addEventListener('click', function(event) {
             event.stopPropagation(modalContainer) // ngừng hiệu ứng nổi bọt
         })
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var mobileNav = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        console.log(headerHeight);
+        //Open/Close Mobile Menu
+        mobileNav.onclick = function() {
+                var isClosed = header.clientHeight === headerHeight;
+
+                if (isClosed) {
+                    header.style.height = 'auto';
+                } else {
+                    header.style.height = null;
+                }
+            }
+            // Open/Close Mobile Menu when click on list
+        var menuItems = document.querySelectorAll('#nav>li>a[href*="#"]')
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+
+                    header.style.height = '46px';
+                }
+            }
+
+        }
     </script>
 </body>
 
