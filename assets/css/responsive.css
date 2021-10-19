@@ -10,9 +10,10 @@
     }
     #header {
         color: black;
-        max-width: 100%;
+       
         display: inline-block;
         overflow: hidden;
+         max-width: 100% !important;
     }
     #nav .subnav {
         position: initial;
