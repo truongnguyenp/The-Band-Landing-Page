@@ -39,7 +39,7 @@
         margin: 0px 8px 0px;
     }
     #content .s-col-full {
-        width: 100%;
+        width: 100% !important;
         margin-top: 30px;
     }
     #content .member-img {
@@ -50,6 +50,15 @@
     }
     .tour-section {
         padding-bottom: 0px;
+    }
+    .s-full-width {
+        width: 100% !important;
+    }
+    .s-mt-8 {
+        margin-top: 8px;
+    }
+    .s-mt-32 {
+        margin-top: 32px;
     }
 }
 
