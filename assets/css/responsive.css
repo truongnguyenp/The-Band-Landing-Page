@@ -2,6 +2,9 @@
     .nav__mobile {
         display: none;
     }
+    .L-col-double {
+        width: 50%;
+    }
 }
 
 
@@ -37,6 +40,9 @@
 @media only screen and (max-width: 739px) {
     .search-btn {
         display: none;
+    }
+    .nav__mobile {
+        display: block !important;
     }
     #header {
         color: black;
